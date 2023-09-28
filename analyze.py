@@ -21,3 +21,6 @@ print(g['시장가치(억)'].sum().sort_values(ascending=False))
 # 나라별 시장가치(억) 총합
 g = df.groupby('nation')
 print(g['시장가치(억)'].sum().sort_values(ascending=False))
+
+# 시장가치(억) 높은 선수 5명 내림차순으로 보여주기
+print(df.sort_values("시장가치(억)", ascending=False).head())
